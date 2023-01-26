@@ -13,8 +13,8 @@ public class MovieController {
     @Autowired
     MovieService movieService;
     @PostMapping("/add-movie")
-    public ResponseEntity addMovies(@RequestBody Movie movie){
-        String response = movieService.addMovies(movie);
+    public ResponseEntity addMovie(@RequestBody Movie movie){
+        String response = movieService.addMovie(movie);
         return new ResponseEntity(response, HttpStatus.CREATED);
     }
     @PostMapping("/add-director")
